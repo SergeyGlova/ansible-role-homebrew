@@ -96,12 +96,12 @@
       check_mode: false
 
     # Tap.
-    - name: Ensure configured taps are tapped.
-      homebrew_tap:
-        tap: '{{ item.name | default(item) }}'
-        url: '{{ item.url | default(omit) }}'
-        state: present
-      loop: "{{ homebrew_taps }}"
+#     - name: Ensure configured taps are tapped.
+#       homebrew_tap:
+#         tap: '{{ item.name | default(item) }}'
+#         url: '{{ item.url | default(omit) }}'
+#         state: present
+#       loop: "{{ homebrew_taps }}"
 
     # Cask.
     - name: Ensure blacklisted cask applications are not installed.
